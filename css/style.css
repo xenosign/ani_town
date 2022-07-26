@@ -5,7 +5,7 @@
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   background-color: #b1e1e2;
@@ -24,19 +24,18 @@ section {
 section .sky {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: relative;
 }
 
 section .sky .sun {
   width: 180px;
   position: absolute;
+  display: block;
   left: 50%;
   margin-left: -90px;
   top: -130px;
   transform-origin: center 600px;
-  animation: sun linear 20s infinite;
+  animation: sun 20s linear infinite;
 }
 
 section .sky .moon {
@@ -46,26 +45,26 @@ section .sky .moon {
   margin-left: -80px;
   top: -130px;
   transform-origin: center 600px;
-  animation: moon linear 20s infinite;
+  animation: moon 20s linear infinite;
 }
 
 section .sky .cloud_1 {
   position: absolute;
   width: 160px;
-  top: -30px;
   left: 0%;
+  top: -30px;
   animation: cloud_1 linear 20s infinite;
 }
 
 section .sky .cloud_2 {
   position: absolute;
   width: 90px;
-  top: 20px;
   left: 12%;
+  top: 20px;
   animation: cloud_2 linear 15s infinite;
 }
 
-section .town .town_img {
+section .city .city_img {
   position: absolute;
   bottom: 0px;
   width: 1000px;
@@ -76,15 +75,19 @@ section .town .town_img {
   0% {
     background-color: #636888;
   }
+
   25% {
     background-color: #b1e1e2;
   }
+
   50% {
     background-color: #fcd2e2;
   }
+
   75% {
     background-color: #675577;
   }
+
   100% {
     background-color: #636888;
   }
@@ -95,18 +98,22 @@ section .town .town_img {
     transform: rotate(-90deg);
     opacity: 0;
   }
+
   25% {
     transform: rotate(0deg);
     opacity: 1;
   }
+
   50% {
     transform: rotate(90deg);
     opacity: 0;
   }
+
   75% {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     opacity: 0;
   }
+
   100% {
     transform: rotate(-90deg);
     opacity: 0;
@@ -115,21 +122,25 @@ section .town .town_img {
 
 @keyframes moon {
   0% {
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
     opacity: 0;
   }
+
   25% {
-    transform: rotate(0deg);
+    transform: rotate(90deg);
     opacity: 0;
   }
+
   50% {
     transform: rotate(90deg);
     opacity: 0;
   }
+
   75% {
     transform: rotate(0deg);
     opacity: 1;
   }
+
   100% {
     transform: rotate(-90deg);
     opacity: 0;
@@ -139,45 +150,53 @@ section .town .town_img {
 @keyframes cloud_1 {
   0% {
     left: 0%;
-    opacity: 1;
+    opacity: 0;
   }
+
   25% {
     left: 50%;
     opacity: 1;
   }
+
   50% {
     left: 100%;
     opacity: 0;
   }
+
   75% {
     left: 50%;
     opacity: 1;
   }
+
   100% {
     left: 0%;
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 @keyframes cloud_2 {
   0% {
     left: 12%;
-    opacity: 1;
+    opacity: 0;
   }
+
   25% {
     left: 62%;
     opacity: 1;
   }
+
   50% {
     left: 112%;
-    opacity: 1;
+    opacity: 0;
   }
+
   75% {
     left: 62%;
     opacity: 1;
   }
+
   100% {
     left: 12%;
-    opacity: 1;
+    opacity: 0;
   }
 }
